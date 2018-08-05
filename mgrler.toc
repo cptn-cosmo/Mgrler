@@ -1,0 +1,7 @@
+## Interface: 80000
+## Title: mgrler
+## Author: Sal
+## Version: @project-version@
+## Notes: Convert text from English to Nerglish.
+
+main.lua
