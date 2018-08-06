@@ -2,6 +2,32 @@ local _ = ...
 
 Nerglish = CreateFrame("Frame")
 
+-- known words from https://wow.gamepedia.com/Nerglish
+local DICTIONARY = {
+    aunt = "mmmrrggllm",
+    uncle = "mmmrrgglm",
+    friend = "mmmrrglllm",
+    move = "flllurlog",
+    fisherman = "flllurlokkr",
+    feral = "furl",
+    good = "mmmm",
+    magic = "mrrrggk",
+    right = "mmmml",
+    thirsty = "mllgggrrrr",
+    ["and"] = "n",
+    no = "nk",
+    sing = "shng",
+    honor = "uuua",
+    scar = "skr",
+    ogre = "rrrgrrr",
+    ringworm = "murguhlum",
+    murloc = "gmmmlmrmrgmg",
+    sorry = "mrrrgll",
+    yes = "mrgle",
+    spring = "srng",
+    clan = "klun"
+}
+
 local CHAR_MAP = {
     a = "mr",
     b = "gl",
