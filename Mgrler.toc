@@ -1,6 +1,6 @@
 ## Interface: 80000
 ## Title: Mgrler
-## Author: Sal
+## Author: Salinder Sidhu
 ## Version: @project-version@
 ## Notes: Translate chat text from English to Nerglish.
 
