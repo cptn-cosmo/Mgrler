@@ -1,75 +1,20 @@
-local tab = {
-    a = "mr",
-    b = "gl",
-    c = "ll",
-    d = "br",
-    e = "mg",
-    f = "gr",
-    g = "lb",
-    h = "rb",
-    i = "ml",
-    j = "br",
-    k = "gr",
-    l = "rl",
-    m = "mr",
-    n = "bl",
-    o = "lr",
-    p = "gr",
-    q = "gl",
-    r = "mr",
-    s = "mrll",
-    t = "gr",
-    u = "ml",
-    v = "ba",
-    w = "",
-    x = "mr",
-    y = "rl",
-    z = "lr",
+local _ = ...
 
-    A = "Mr",
-    B = "Gl",
-    C = "Ll",
-    D = "Br",
-    E = "Mg",
-    F = "Gr",
-    G = "Lb",
-    H = "Rb",
-    I = "Ml",
-    J = "Br",
-    K = "Gr",
-    L = "Rl",
-    M = "Mr",
-    N = "Bl",
-    O = "Lr",
-    P = "Gr",
-    Q = "Gl",
-    R = "Mr",
-    S = "Mrll",
-    T = "Gr",
-    U = "Ml",
-    V = "Ba",
-    W = "",
-    X = "Mr",
-    Y = "Ll",
-    Z = "Lr"
-}
+-- CONSTANTS
+ADDON_NAME = "Mgrler"
+ADDON_VERSION = GetAddOnMetadata(ADDON_NAME, "Version")
 
-local function translate(msg)
-    local res = ""
-
-    for c in msg:gmatch(".") do
-        res = res..(tab[c] or c)
+local function NerglishAddonCommands(msg, editbox)
+    if msg ~= "" then
+        local chatID = DEFAULT_CHAT_FRAME.editBox:GetAttribute("chatType")
+        local langID = DEFAULT_CHAT_FRAME.editBox.languageID
+        SendChatMessage("[Nerglish]: "..Nerglish.Translate(msg), chatID, langID)
+    else
+        print("|cFFFFFF00Welcome to Mgrler the Nerglish chat addon.|r")
+        print("|cFFFFFF00Version: "..ADDON_VERSION.."|r")
+        print("|cFFFFFF00Syntax: /ngl type some text here.|r")
     end
-
-    return res
 end
 
-local function MgrlAddonCommands(msg, editbox)
-
-    --print("[Nerglish]: "..translate(msg))
-    SendChatMessage("[Nerglish]: "..translate(msg), "GUILD", DEFAULT_CHAT_FRAME.editBox.languageID)
-
-end
-
-SLASH_MGRL1 = '/mgrl'
-SlashCmdList["MGRL"] = MgrlAddonCommands
+SLASH_NGL1 = '/ngl'
+SlashCmdList["NGL"] = NerglishAddonCommands
