@@ -1,10 +1,7 @@
 local _ = ...
 
--- CONSTANTS
-ADDON_NAME = "Mgrler"
-ADDON_VERSION = GetAddOnMetadata(ADDON_NAME, "Version")
-
-PREFIX = "[Murloc]: "
+local PREFIX = "[Murloc] "
+local ADDON_VERSION = GetAddOnMetadata("Mgrler", "Version")
 
 local function MgrlerAddonCommands(msg, editbox)
     if msg ~= "" then
