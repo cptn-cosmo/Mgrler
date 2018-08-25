@@ -1,5 +1,5 @@
 NAME=Mgrler
-SRC=*.toc *.lua locales media modules
+SRC=*.toc *.lua modules
 HASH?="DEV_$(shell git rev-parse HEAD | cut -c 1-10 | tr a-z A-Z)"
 FOLDER:="C:/Program Files/World of Warcraft/Interface/AddOns/$(NAME)"
 

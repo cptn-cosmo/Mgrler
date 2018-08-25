@@ -1,5 +1,3 @@
-local _ = ...
-
 local PREFIX = "[Murloc] "
 local ADDON_VERSION = GetAddOnMetadata("Mgrler", "Version")
 
@@ -16,7 +14,7 @@ local function MgrlerAddonCommands(msg, editbox)
     else
         print("|cFFFFFF00Welcome to Mgrler the Nerglish chat addon.|r")
         print("|cFFFFFF00Version: "..ADDON_VERSION.."|r")
-        print("|cFFFFFF00Use: /ngl type some text here.|r")
+        print("|cFFFFFF00Use: /ngl <some text here>.|r")
     end
 end
 
