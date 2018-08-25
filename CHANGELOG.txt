@@ -1,3 +1,5 @@
 ## Changelog
 
-- Small bug fix
+- Dictionary support
+- Emjoi support
+- Misc bug fixes
